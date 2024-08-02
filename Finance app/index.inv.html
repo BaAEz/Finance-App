@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="main.inv.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <button class="toggle-btn" onclick="toggleNavbar()">☰</button>
+        <a href="./index.html" data-initial="H"><span class="text">Home</span></a>
+        <a href="./index.splitwise.html" data-initial="S"><span class="text">Splitwise</span></a>
+    </div>
+    <header>
+        <h1>Investment Calculator</h1>
+    </header>
+    <main class="container">
+        <section class="calculator">
+            <div class="heading">
+                <h3>Calculate Your Growth</h3>
+                <small>Visualize your investment growth over time</small>
+            </div>
+            <form class="compound-form">
+                <div class="input-group">
+                    <label for="initialamount">Initial Amount</label>
+                    <input type="number" id="initialamount" />
+                </div>
+                <div class="input-group">
+                    <label for="years">Investment Years</label>
+                    <input type="number" id="years" />
+                </div>
+                <div class="input-group">
+                    <label for="rates">Estimated Rates (%)</label>
+                    <input type="number" id="rates" />
+                </div>
+                <div class="input-group">
+                    <label for="compound">Compound Interval</label>
+                    <select id="compound">
+                        <option value="1">Annually</option>
+                        <option value="4">Quarterly</option>
+                        <option value="2">Semiannually</option>
+                        <option value="12">Monthly</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <button>Calculate</button>
+                </div>
+            </form>
+        </section>
+        <section class="results">
+            <h3 id="message"></h3>
+            <canvas id="data-set"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tushar Gupta. All rights reserved.</p>
+    </footer>
+    <script src="app.inv.js"></script>
+</body>
+</html>
